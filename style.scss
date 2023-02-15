@@ -1,0 +1,363 @@
+// Variable
+$gris: #343a40;
+$dimension: 100%;
+// Fin
+
+// Mixin
+
+@mixin sizes($width, $height){
+    height: $height;
+    width: $width;
+}
+
+// Fin
+
+/* Global */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Fin */
+
+/* Body */
+
+body {
+    font-family: 'Jua', sans-serif;
+    text-align: center;
+    background-color: palevioletred;
+}
+
+/* Fin */
+
+/* Navbar */
+
+.navbar-brand {
+    font-size: 45px;
+    
+}
+
+.navbar-toggler {
+    border: 2px solid #ADC5CF !important;
+}
+
+.nav-link {
+    color: white !important;
+    text-align: center;
+    font-size: 25px;
+
+
+    &:hover {
+        color: black !important;
+    }
+}
+
+
+/* Fin */
+
+/* Jumbotron */
+
+.jumbotron {
+    text-align: center;
+    font-size: 20px;
+    border-radius: 0%;
+    margin: 0;
+    background-color: palevioletred ;
+    // color: white;
+}
+
+.wsp-hotmail {
+    color: white;
+
+    &:hover {
+        text-decoration: none;
+        color: $gris;
+    }
+}
+
+.h1 {
+    font-size: 70px;
+}
+
+/* Fin */
+
+/* Iframe */
+
+iframe {
+    width: $dimension;
+    height: 600px;
+    margin-top: 10px;
+}
+
+@media screen and (min-width: 768px) {
+    iframe {
+        width: $dimension - 55%;
+    }
+}
+
+/* Fin */
+
+/* Footer */
+
+footer {
+    text-align: center;
+    font-size: 20px;
+    background-color: $gris;
+    color: white;
+    background-color: $gris;
+}
+
+a {
+    color: white;
+}
+
+a:hover {
+    color: #ADC5CF;
+}
+
+
+.copyright {
+    height: 10px;
+}
+
+.redes {
+    font-size: 30px;
+}
+
+/* Fin */
+
+/* Btn subir */
+
+.subir {
+    @include sizes(40px, 40px);
+    background-color: transparent;
+    color: $gris !important;
+    border: 3px solid $gris;
+    position: fixed;
+    right: 35px;
+    bottom: 90px;
+    font-size: 30px;
+    text-align: center;
+    line-height: 40px;
+    box-shadow: 0 0 5px #fff;
+    border-radius: 10px;
+
+    &:hover {
+        color: white !important;
+        background-color: $gris;
+    }
+}
+
+/* Fin */
+
+/* Nosotros */
+
+video {
+    width: $dimension;
+    height: $dimension;
+    background-size: cover;
+    background-position: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+}
+
+/* Fin */
+
+/* Producto */
+
+section {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: center;
+    padding: 30px;
+    width: $dimension;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+    .grid-media {
+        display: grid;
+        grid-template-columns: repeat(2, 50%);
+        grid-template-areas:
+            "img1 img2"
+            "img3 img4"
+            "img5 img6"
+            "img7 img8"
+            "img9 img10"
+            "img11 img12"
+            "img13 img14"
+            "img15 img16";
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .grid-media {
+        display: grid;
+        grid-template-columns: repeat(3, 33%);
+        grid-template-areas:
+            "img1 img2 img3"
+            "img4 img5 img6"
+            "img7 img8 img9"
+            "img10 img11 img12"
+            "img13 img14 img15"
+            "img16 img17 img18";
+    }
+}
+
+.img-3d {
+    height: 450px;
+    background-size: cover;
+    background-position: center;
+    border: 5px solid rgb(0, 0, 0);
+}
+
+.img1 {
+    background-image: url(img/BatSignal.gif);
+    grid-area: img1;
+}
+
+.img2 {
+    background-image: url(img/bati-ballesta.gif);
+    grid-area: img2;
+}
+
+.img3 {
+    background-image: url(img/ajedrez.gif);
+    grid-area: img3;
+}
+
+.img4 {
+    background-image: url(img/porta-esponja.gif);
+    grid-area: img4;
+}
+
+.img5 {
+    background-image: url(img/dragon-ball-llavero.gif);
+    grid-area: img5;
+}
+
+.img6 {
+    background-image: url(img/estante.gif);
+    grid-area: img6;
+}
+
+.img7 {
+    background-image: url(img/soporte-bob-esponja.gif);
+    grid-area: img7;
+}
+
+.img8 {
+    background-image: url(img/cerveza.gif);
+    grid-area: img8;
+}
+
+.img9 {
+    background-image: url(img/switch-dock.gif);
+    grid-area: img9;
+}
+
+.img10 {
+    background-image: url(img/Dispenser-comida.gif);
+    grid-area: img10;
+}
+
+.img11 {
+    background-image: url(img/gyarados.gif);
+    grid-area: img11;
+}
+
+.img12 {
+    background-image: url(img/llavero-de-buho\.gif);
+    grid-area: img12;
+}
+
+.img13 {
+    background-image: url(img/turtle.gif);
+    grid-area: img13;
+}
+
+.img14 {
+    background-image: url(img/llavero-desplegable-gato.gif);
+    grid-area: img14;
+}
+
+.img15 {
+    background-image: url(img/lobo.gif);
+    grid-area: img15;
+}
+
+.img16 {
+    background-image: url(img/radiactive.gif);
+    grid-area: img16;
+}
+
+.img17 {
+    background-image: url(img/Eva01.gif);
+    grid-area: img17;
+}
+
+.img18 {
+    background-image: url(img/Gameboy.gif);
+    grid-area: img18;
+}
+
+/* Fin */
+
+/* Servicio */
+
+.img-construccion {
+    width: $dimension;
+    height: $dimension;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 80px;
+    margin-top: 80px;
+}
+
+@media screen and (min-width: 1200px) {
+    .img-construccion {
+        width: $dimension - 50%;
+    }
+}
+
+/* Fin */
+
+/* Contacto */
+
+form {
+    display: inline-block;
+    text-align: center;
+    font-size: 30px;
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+
+.form-control {
+    width: 50vh;
+}
+
+textarea {
+    resize: none;
+}
+
+.boton1 {
+    text-decoration: none;
+    font-size: 20px;
+    background-color: $gris;
+    border: $gris;
+
+    &:hover {
+        color: $gris;
+        background-color: #ADC5CF;
+    }
+}
+
+/* Fin */
