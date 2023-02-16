@@ -1,7 +1,13 @@
 // Variable
-$gris: #343a40;
+$gris: #adc5cf;
 $dimension: 100%;
+$letras: #ae3741;
+$fondo: #fadbc9;
+
 // Fin
+
+    // box-shadow: 0 0 5px #fff;
+
 
 // Mixin
 
@@ -31,7 +37,7 @@ html {
 body {
     font-family: 'Jua', sans-serif;
     text-align: center;
-    background-color: palevioletred;
+    background-color: $fondo;
 }
 
 /* Fin */
@@ -40,21 +46,26 @@ body {
 
 .navbar-brand {
     font-size: 45px;
-    
+    color: $letras !important;
 }
 
 .navbar-toggler {
-    border: 2px solid #ADC5CF !important;
+    border: 2px dashed $letras !important;
+    border-radius: 20%;
+
+    &:hover{
+        border-color: $gris !important;
+    }
 }
 
 .nav-link {
-    color: white !important;
     text-align: center;
     font-size: 25px;
+    color: $letras !important;
 
 
     &:hover {
-        color: black !important;
+        color: $gris !important;
     }
 }
 
@@ -68,12 +79,20 @@ body {
     font-size: 20px;
     border-radius: 0%;
     margin: 0;
-    background-color: palevioletred ;
-    // color: white;
+    background-color: $fondo ;
+    color: $letras;
 }
 
+.h1 {
+    font-size: 70px;
+}
+
+// Fin
+
+// wsp-hotmail
+
 .wsp-hotmail {
-    color: white;
+    color: #4b839b;
 
     &:hover {
         text-decoration: none;
@@ -81,18 +100,15 @@ body {
     }
 }
 
-.h1 {
-    font-size: 70px;
-}
-
-/* Fin */
+// Fin
 
 /* Iframe */
 
 iframe {
     width: $dimension;
     height: 600px;
-    margin-top: 10px;
+    margin-bottom: 30px;
+    border-radius: 6%;
 }
 
 @media screen and (min-width: 768px) {
@@ -108,13 +124,12 @@ iframe {
 footer {
     text-align: center;
     font-size: 20px;
-    background-color: $gris;
-    color: white;
-    background-color: $gris;
+    color: $letras;
+    background-color: $fondo;
 }
 
 a {
-    color: white;
+    color: $letras;
 }
 
 a:hover {
@@ -137,20 +152,19 @@ a:hover {
 .subir {
     @include sizes(40px, 40px);
     background-color: transparent;
-    color: $gris !important;
-    border: 3px solid $gris;
+    color: $letras;
+    border: 3px solid $letras;
     position: fixed;
     right: 35px;
     bottom: 90px;
     font-size: 30px;
     text-align: center;
     line-height: 40px;
-    box-shadow: 0 0 5px #fff;
     border-radius: 10px;
 
     &:hover {
-        color: white !important;
-        background-color: $gris;
+        color: $gris;
+        border-color: $gris;
     }
 }
 
@@ -163,14 +177,19 @@ video {
     height: $dimension;
     background-size: cover;
     background-position: center;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
+    border-radius: 2%;
+}
 
+@media screen and (min-width: 768px) {
+    video {
+        width: $dimension - 20%;
+    }
 }
 
 /* Fin */
 
-/* Producto */
+/* Productos */
 
 section {
     display: flex;
@@ -216,7 +235,8 @@ section {
     height: 450px;
     background-size: cover;
     background-position: center;
-    border: 5px solid rgb(0, 0, 0);
+    border: 5px solid black;
+    border-radius: 1%;
 }
 
 .img1 {
@@ -318,13 +338,22 @@ section {
     height: $dimension;
     background-size: cover;
     background-position: center;
-    margin-bottom: 80px;
-    margin-top: 80px;
+    margin-bottom: 50px;
+    border: 5px dashed white;
+    border-radius: $dimension;
+
+}
+
+@media screen and (max-width: 600px) {
+    .img-construccion {
+        margin-top: 90px;
+        margin-bottom: 140px;
+    }
 }
 
 @media screen and (min-width: 1200px) {
     .img-construccion {
-        width: $dimension - 50%;
+        width: $dimension - 40%;
     }
 }
 
@@ -336,12 +365,14 @@ form {
     display: inline-block;
     text-align: center;
     font-size: 30px;
-    padding-top: 20px;
     padding-bottom: 30px;
+    color: $letras;
+    margin-bottom: 40px;
 }
 
 .form-control {
     width: 50vh;
+    border-color: $letras;
 }
 
 textarea {
@@ -351,12 +382,13 @@ textarea {
 .boton1 {
     text-decoration: none;
     font-size: 20px;
-    background-color: $gris;
-    border: $gris;
+    background-color: $letras;
+    border-color: $letras;
 
     &:hover {
-        color: $gris;
-        background-color: #ADC5CF;
+        color: $letras;
+        background-color: transparent;
+        border: 1px solid $letras;
     }
 }
 

@@ -14,26 +14,31 @@ html {
 body {
   font-family: "Jua", sans-serif;
   text-align: center;
-  background-color: palevioletred;
+  background-color: #fadbc9;
 }
 
 /* Fin */
 /* Navbar */
 .navbar-brand {
   font-size: 45px;
+  color: #ae3741 !important;
 }
 
 .navbar-toggler {
-  border: 2px solid #ADC5CF !important;
+  border: 2px dashed #ae3741 !important;
+  border-radius: 20%;
+}
+.navbar-toggler:hover {
+  border-color: #adc5cf !important;
 }
 
 .nav-link {
-  color: white !important;
   text-align: center;
   font-size: 25px;
+  color: #ae3741 !important;
 }
 .nav-link:hover {
-  color: black !important;
+  color: #adc5cf !important;
 }
 
 /* Fin */
@@ -43,27 +48,28 @@ body {
   font-size: 20px;
   border-radius: 0%;
   margin: 0;
-  background-color: palevioletred;
-}
-
-.wsp-hotmail {
-  color: white;
-}
-.wsp-hotmail:hover {
-  text-decoration: none;
-  color: #343a40;
+  background-color: #fadbc9;
+  color: #ae3741;
 }
 
 .h1 {
   font-size: 70px;
 }
 
-/* Fin */
+.wsp-hotmail {
+  color: #4b839b;
+}
+.wsp-hotmail:hover {
+  text-decoration: none;
+  color: #adc5cf;
+}
+
 /* Iframe */
 iframe {
   width: 100%;
   height: 600px;
-  margin-top: 10px;
+  margin-bottom: 30px;
+  border-radius: 6%;
 }
 
 @media screen and (min-width: 768px) {
@@ -76,13 +82,12 @@ iframe {
 footer {
   text-align: center;
   font-size: 20px;
-  background-color: #343a40;
-  color: white;
-  background-color: #343a40;
+  color: #ae3741;
+  background-color: #fadbc9;
 }
 
 a {
-  color: white;
+  color: #ae3741;
 }
 
 a:hover {
@@ -103,20 +108,19 @@ a:hover {
   height: 40px;
   width: 40px;
   background-color: transparent;
-  color: #343a40 !important;
-  border: 3px solid #343a40;
+  color: #ae3741;
+  border: 3px solid #ae3741;
   position: fixed;
   right: 35px;
   bottom: 90px;
   font-size: 30px;
   text-align: center;
   line-height: 40px;
-  box-shadow: 0 0 5px #fff;
   border-radius: 10px;
 }
 .subir:hover {
-  color: white !important;
-  background-color: #343a40;
+  color: #adc5cf;
+  border-color: #adc5cf;
 }
 
 /* Fin */
@@ -126,12 +130,17 @@ video {
   height: 100%;
   background-size: cover;
   background-position: center;
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
+  border-radius: 2%;
 }
 
+@media screen and (min-width: 768px) {
+  video {
+    width: 80%;
+  }
+}
 /* Fin */
-/* Producto */
+/* Productos */
 section {
   display: flex;
   flex-direction: column;
@@ -160,7 +169,8 @@ section {
   height: 450px;
   background-size: cover;
   background-position: center;
-  border: 5px solid rgb(0, 0, 0);
+  border: 5px solid black;
+  border-radius: 1%;
 }
 
 .img1 {
@@ -260,13 +270,20 @@ section {
   height: 100%;
   background-size: cover;
   background-position: center;
-  margin-bottom: 80px;
-  margin-top: 80px;
+  margin-bottom: 50px;
+  border: 5px dashed white;
+  border-radius: 100%;
 }
 
+@media screen and (max-width: 600px) {
+  .img-construccion {
+    margin-top: 90px;
+    margin-bottom: 140px;
+  }
+}
 @media screen and (min-width: 1200px) {
   .img-construccion {
-    width: 50%;
+    width: 60%;
   }
 }
 /* Fin */
@@ -275,12 +292,14 @@ form {
   display: inline-block;
   text-align: center;
   font-size: 30px;
-  padding-top: 20px;
   padding-bottom: 30px;
+  color: #ae3741;
+  margin-bottom: 40px;
 }
 
 .form-control {
   width: 50vh;
+  border-color: #ae3741;
 }
 
 textarea {
@@ -290,12 +309,13 @@ textarea {
 .boton1 {
   text-decoration: none;
   font-size: 20px;
-  background-color: #343a40;
-  border: #343a40;
+  background-color: #ae3741;
+  border-color: #ae3741;
 }
 .boton1:hover {
-  color: #343a40;
-  background-color: #ADC5CF;
+  color: #ae3741;
+  background-color: transparent;
+  border: 1px solid #ae3741;
 }
 
 /* Fin */
